@@ -1,0 +1,54 @@
+.section-soafs {
+    padding-bottom: 30px;
+}
+
+.box-text-content {
+    padding: 50px 0 20px 0;
+    max-width: 60%;
+}
+
+.box-text-content__title {
+    font-size: 48px;
+    line-height: 36px;
+    padding-bottom: 30px;
+}
+
+.box-text-content__description {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.container-category {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 15px 10px;
+}
+
+.card-category {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.img-category img {
+    border-radius: 3px;
+}
+
+.icon-line {
+    width: 20px;
+    height: 4px;
+    margin-right: 9px;
+}
+
+.title-category {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+}

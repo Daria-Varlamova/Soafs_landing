@@ -1,0 +1,165 @@
+body,
+html {
+    font-size: 14px;
+    font-family: 'Exo 2', sans-serif;
+}
+
+body.filter-open {
+    overflow: hidden;
+}
+
+body.filter-open .accordion-mask {
+    height: 100vh;
+}
+
+body.filter-open .accordion-conttent-fixed {
+    display: block;
+}
+
+main {
+    padding-top: 160px;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.relative {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.button {
+    border: none;
+    outline: none;
+    padding: 13px 20px;
+    background-color: transparent;
+
+    display: flex;
+    align-items: center;
+
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.button svg {
+    margin-right: 10px;
+}
+
+/* MASK */
+
+.mask-blur {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(2px);
+}
+
+.mask-gradient {
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 64.14%),
+        linear-gradient(0deg, rgba(255, 255, 255, 0) -4.56%, #FFFFFF 100%),
+        radial-gradient(54.77% 207.12% at 11.18% 0%, #ECECEC 0%, #F5F5F5);
+    opacity: 0.7;
+
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* MASK END */
+
+/* BREADCRUMB */
+
+.breadcrumb-item a {
+    color: #767676;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.breadcrumb-item.active {
+    color: black;
+}
+
+/* BREADCRUMB END  */
+
+/* PADGINATOR */
+
+.paginator {
+    display: flex;
+    column-gap: 8px;
+    padding: 35px 0 60px 0;
+}
+
+.paginator span {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.current {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 87px;
+    height: 45px;
+    border-radius: 3px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 45px;
+
+    color: #6783AC;
+    border: 1px solid #6783AC;
+}
+
+.current--active {
+    background: #6783AC;
+    color: #FFFFFF;
+}
+
+/* PADGINATOR END*/
+

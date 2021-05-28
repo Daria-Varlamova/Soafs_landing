@@ -1,0 +1,38 @@
+.content-filter {
+    width: 100%;
+    padding: 26px 23px 26px 30px;
+    border: 1px solid #E0E8EF;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 34px;
+}
+
+.filter-btn {
+    padding: 0;
+}
+
+.filter-list {
+    display: flex;
+}
+
+.filter-link {
+    display: block;
+    color: #6A6A6A;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.filter-item {
+    padding: 0 22px 0 22px;
+    border-right: 1px solid #E0E8EF;
+}
+
+.filter-item:first-child {
+    padding: 0 22px 0 0;
+}
+
+.filter-item:last-child {
+    border-right: none;
+}

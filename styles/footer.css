@@ -1,0 +1,149 @@
+.footer {
+    padding: 38px 0 34px 0;
+    background: #1F324A;
+}
+
+.footer-content__logo {
+    display: block;
+    max-width: 169px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content__box--left {
+    padding-top: 17px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content__logo-description {
+    font-size: 16px;
+    line-height: 24px;
+    color: #B8C9E2;
+    padding: 25px 0 36px 0;
+}
+
+.contacts__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+}
+
+.contacts__tel {
+    display: block;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFC700;
+    padding-bottom: 24px;
+}
+
+.contacts__social-box {
+    display: grid;
+    grid-template-columns: repeat(2, 62px) 128px;
+    column-gap: 10px;
+}
+
+.contacts__social {
+    padding: 8px 15px;
+    background: #364B6A;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    transition: all.3s;
+}
+
+.contacts__social svg {
+    fill: white;
+}
+
+.contacts__social:hover {
+    transition: all.3s;
+    background: #EEF1F5;
+    color: #364B6A;
+}
+
+.contacts__social:hover svg {
+    fill: #364B6A;
+}
+
+.footer-content__list-title {
+    text-align: right;
+    color: #C0D9FF;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 10px;
+}
+
+.footer-content__link {
+    text-align: right;
+    font-size: 14px;
+    line-height: 18px;
+    display: block;
+    color: #6783AC;
+    padding-bottom: 10px;
+}
+
+.section-coopyright {
+    width: 100%;
+    padding: 20px 0;
+    background: #1A2B41;
+}
+
+.section-coopyright-content {
+    color: #6783AC;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.section-coopyright-content__text {
+    display: flex;
+    align-items: center;
+    column-gap: 26px;
+}
+
+.text-dots {
+    position: relative;
+}
+
+.text-dots::after {
+    content: ".";
+    display: block;
+
+    position: absolute;
+    top: -5px;
+    left: -15px;
+}
+
+.text-dots::before {
+    content: ".";
+    display: block;
+
+    position: absolute;
+    top: -5px;
+    right: -15px;
+}
+
+.section-coopyright-content__img {
+    width: 92px;
+}
+
+.section-coopyright-content {
+    display: flex;
+    justify-content: space-between;
+}

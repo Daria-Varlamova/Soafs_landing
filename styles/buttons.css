@@ -1,0 +1,69 @@
+.btn-favorites,
+.btn-basket {
+    background: #FFFFFF;
+    border: 1px solid #E2E2E2;
+    box-sizing: border-box;
+    border-radius: 22px;
+}
+
+.btn-favorites:hover {
+    color: black;
+}
+
+.btn-basket {
+    width: 131px;
+    justify-content: center;
+}
+
+.btn-basket__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-basket__content--active {
+    display: none;
+}
+
+.btn-basket__content--active svg {
+    margin-left: 10px;
+    fill: #FFFFFF;
+}
+
+.btn-basket:hover {
+    background: #16C23C;
+    color: #FFFFFF;
+}
+
+.btn-basket:hover .btn-basket__content--active {
+    display: flex;
+    align-items: center;
+}
+
+.btn-basket:hover .btn-basket__content {
+    display: none;
+}
+
+.box-bth {
+    display: flex;
+}
+
+.box-bth a:last-child {
+    margin-left: 11px;
+}
+
+.heart {
+    transition: all .3s;
+    fill: transparent;
+}
+
+.heart-border {
+    transition: all .3s;
+    fill: #333333;
+}
+
+.btn-favorites:hover .heart,
+.btn-favorites:hover .heart-border {
+    transition: all .3s;
+    fill: #EB3A3A;
+}

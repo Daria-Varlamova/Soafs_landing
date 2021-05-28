@@ -1,0 +1,1457 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/accordion.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/section-filter.css">
+    <link rel="stylesheet" href="./styles/buttons.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/section-catalog.css">
+    <link rel="stylesheet" href="./styles/section-soafs.css">
+    <link rel="stylesheet" href="./styles/section-related.css">
+    <title>Диваны</title>
+</head>
+
+<body class="body">
+    <main>
+        <!-- Accordion -->
+        <div class="accordion-mask handleClose"></div>
+        <div class="accordion-conttent-fixed">
+            <div class="accordion-conttent-relative">
+                <div class="accordion-header-absolute">
+                    <div class="accordion-title">
+                        <span>
+                            Фильтры
+                        </span>
+                    </div>
+                    <button class="button btn-close handleClose"></button>
+                </div>
+
+                <div class="accordion-content-box">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-heading1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapse1" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapse1">
+                                    Размеры дивана
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapse1" class="accordion-collapse collapse show"
+                                aria-labelledby="panelsStayOpen-heading1">
+                                <div class="accordion-body">
+                                    <div class="sofa-dimensions-content">
+
+                                        <div class="sofa-dimensions-box">
+                                            <div class="sofa-dimensions-title">
+                                                <span>
+                                                    Ширина
+                                                </span>
+                                            </div>
+
+                                            <div class="container-width-input">
+                                                <div class="box-width-input">
+                                                    <div class="width-input-title">
+                                                        от
+                                                    </div>
+                                                    <input class="slider-width-input" id="slider-width-from"
+                                                        type="number">
+                                                </div>
+                                                <div class="box-width-input">
+                                                    <div class="width-input-title">
+                                                        до
+                                                    </div>
+                                                    <input class="slider-width-input" id="slider-width-to"
+                                                        type="number">
+                                                </div>
+                                            </div>
+
+                                            <div class="slider-width-range-box">
+                                                <div class="slider-width-range" id="slider-width"></div>
+                                            </div>
+                                        </div>
+                                        <div class="sofa-dimensions-box">
+                                            <div class="sofa-dimensions-title">
+                                                <span>
+                                                    Длина
+                                                </span>
+                                            </div>
+
+                                            <div class="container-width-input">
+                                                <div class="box-width-input">
+                                                    <div class="width-input-title">
+                                                        от
+                                                    </div>
+                                                    <input class="slider-width-input" id="slider-width-from1"
+                                                        type="number">
+                                                </div>
+                                                <div class="box-width-input">
+                                                    <div class="width-input-title">
+                                                        до
+                                                    </div>
+                                                    <input class="slider-width-input" id="slider-width-to1"
+                                                        type="number">
+                                                </div>
+                                            </div>
+
+                                            <div class="slider-width-range-box">
+                                                <div class="slider-width-range" id="slider-length"></div>
+                                            </div>
+                                        </div>
+                                        <div class="sofa-dimensions-box">
+                                            <div class="sofa-dimensions-title">
+                                                <span>
+                                                    Ширина
+                                                </span>
+                                            </div>
+
+                                            <div class="container-width-input range-block">
+                                                <div class="box-width-input">
+                                                    <div class="width-input-title">
+                                                        от
+                                                    </div>
+                                                    <input class="slider-width-input" id="slider-width-from2"
+                                                        type="number">
+                                                </div>
+                                                <div class="box-width-input">
+                                                    <div class="width-input-title">
+                                                        до
+                                                    </div>
+                                                    <input class="slider-width-input" id="slider-width-to2"
+                                                        type="number">
+                                                </div>
+                                            </div>
+
+                                            <div class="slider-width-range-box">
+                                                <div class="slider-width-range" id="slider-height"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-heading2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapse2" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapse2">
+                                        Механизм трансформации
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapse2" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-heading2">
+                                    <div class="accordion-body">
+                                        <div class="checkbox-container">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="1">
+                                                <label class="form-check-label" for="1">
+                                                    Аккордеон
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="2">
+                                                <label class="form-check-label" for="2">
+                                                    Выкатной
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="3">
+                                                <label class="form-check-label" for="3">
+                                                    Дельфин
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="4">
+                                                <label class="form-check-label" for="4">
+                                                    Еврокнижка
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="5">
+                                                <label class="form-check-label" for="5">
+                                                    Клик-кляк
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="6">
+                                                <label class="form-check-label" for="6">
+                                                    Книжка
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="7">
+                                                <label class="form-check-label" for="7">
+                                                    Пантограф
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="8">
+                                                <label class="form-check-label" for="8">
+                                                    Пума
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-heading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapse3">
+                                        Наполнитель
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-heading3">
+                                    <div class="accordion-body">
+                                        <div class="checkbox-container">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault1-1">
+                                                <label class="form-check-label" for="flexRadioDefault1-1">
+                                                    Пенополиуретан
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault2-2">
+                                                <label class="form-check-label" for="flexRadioDefault2-2">
+                                                    Зависимый пружинный блок
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault3-3">
+                                                <label class="form-check-label" for="flexRadioDefault3-3">
+                                                    Независимый пружинный блок
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-heading4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapse4">
+                                        Цвет канта
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-heading4">
+                                    <div class="accordion-body">
+                                        <div class="checkbox-container">
+                                            <div class="form-check">
+                                                <input class="color-form-check-input" type="checkbox" svalue=""
+                                                    id="color-1">
+                                                <div class="color-box color-box--white"></div>
+                                                <label class="color-form-check-label" for="color-1">
+                                                    Белый
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="color-form-check-input" type="checkbox" value=""
+                                                    id="color-2">
+                                                <div class="color-box color-box--beige"></div>
+                                                <label class="color-form-check-label" for="color-2">
+                                                    Бежевый
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="color-form-check-input" type="checkbox" value=""
+                                                    id="color-3">
+                                                <div class="color-box color-box--brown"></div>
+                                                <label class="color-form-check-label" for="color-3">
+                                                    Коричневый
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="color-form-check-input" type="checkbox" value=""
+                                                    id="color-4">
+                                                <div class="color-box color-box--black"></div>
+                                                <label class="color-form-check-label" for="color-4">
+                                                    Черный
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="color-form-check-input" type="checkbox" value=""
+                                                    id="color-5">
+                                                <div class="color-box color-box--gray"></div>
+                                                <label class="color-form-check-label" for="color-5">
+                                                    Серый
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="color-form-check-input" type="checkbox" value=""
+                                                    id="color-6">
+                                                <div class="color-box color-box--yellow"></div>
+                                                <label class="color-form-check-label" for="color-6">
+                                                    Желтый
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="color-form-check-input" type="checkbox" value=""
+                                                    id="color-7">
+                                                <div class="color-box color-box--red"></div>
+                                                <label class="color-form-check-label" for="color-7">
+                                                    Красный
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="color-form-check-input" type="checkbox" value=""
+                                                    id="color-8">
+                                                <div class="color-box color-box--print"></div>
+                                                <label class="color-form-check-label" for="color-8">
+                                                    Принт
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="color-form-check-input" type="checkbox" value=""
+                                                    id="color-9">
+                                                <div class="color-box color-box--multicolor"></div>
+                                                <label class="color-form-check-label" for="color-9">
+                                                    Мультиколор
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-heading5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapse5">
+                                        Съёмный чехол
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-heading5">
+                                    <div class="accordion-body">
+                                        <div class="switch-container">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox"
+                                                    id="flexSwitchCheckDefault">
+                                                <label class="form-check-label" for="flexSwitchCheckDefault">да /
+                                                    нет</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-accordion-buttons">
+                        <button class="button  btn-see">Смотреть (12)</button>
+                        <button class="button btn-clear">Очистить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="relative">
+                <div class="mask-blur"></div>
+                <div class="mask-gradient"></div>
+                <div class="wrapper">
+                    <div class="header-content log-in">
+                        <a class="log-in__link" href="#">
+                            <span>
+                                Войти
+                            </span>
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.34797 5.43946L1.53094 9.25637C1.28813 9.4993 0.894452 9.4993 0.65176 9.25637C0.409049 9.01366 0.409049 8.62001 0.65176 8.37732L4.02925 4.99994L0.651858 1.62267C0.409147 1.37986 0.409147 0.986248 0.651858 0.743537C0.89457 0.500728 1.28822 0.500728 1.53103 0.743537L5.34807 4.56051C5.46943 4.68192 5.53004 4.84088 5.53004 4.99992C5.53004 5.15903 5.46931 5.31811 5.34797 5.43946Z"
+                                    fill="#808080" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="header-content header-main">
+                        <div class="logo-container">
+                            <a href="#" class="logo">
+                                <svg width="208" height="48" viewBox="0 0 208 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.222656 41.549H4.88541V34.5136L6.38954 32.9868L13.5191 41.549H19.6559L9.9092 29.8732L19.0542 20.5925H12.9776L4.88541 28.7655V20.5925H0.222656V41.549Z"
+                                        fill="#333333" />
+                                    <path
+                                        d="M21.3125 41.549H37.6773V37.208H25.9753V33.0167H36.6544V28.8254H25.9753V24.9335H37.4067V20.5925H21.3125V41.549Z"
+                                        fill="#333333" />
+                                    <path d="M40.8516 41.549H56.8853V37.208H45.5143V20.5925H40.8516V41.549Z"
+                                        fill="#333333" />
+                                    <path d="M59.1523 41.549H75.1861V37.208H63.8151V20.5925H59.1523V41.549Z"
+                                        fill="#333333" />
+                                    <path
+                                        d="M77.4531 41.549H93.8181V37.208H82.1159V33.0167H92.7952V28.8254H82.1159V24.9335H93.5472V20.5925H77.4531V41.549Z"
+                                        fill="#333333" />
+                                    <path
+                                        d="M101.651 41.549V34.394H104.99L110.134 41.549H115.76L109.894 33.5556C112.42 32.5676 114.015 30.1127 114.015 27.4183C114.015 23.9456 112.21 20.5925 105.502 20.5925H96.9883V41.549H101.651ZM105.411 24.9335C108.389 24.9335 109.172 25.9215 109.172 27.4183C109.172 29.0949 107.878 30.0529 105.592 30.0529H101.651V24.9335H105.411Z"
+                                        fill="#333333" />
+                                    <path
+                                        d="M131.819 41.5492H136.482V20.5927H131.819V28.8255H122.464V20.5927H117.801V41.5492H122.464V33.1665H131.819V41.5492Z"
+                                        fill="#FFC700" />
+                                    <path
+                                        d="M139.34 31.071C139.34 37.298 144.183 41.9083 150.2 41.9083C156.216 41.9083 161.029 37.238 161.029 31.071C161.029 24.8439 156.216 20.2335 150.2 20.2335C144.093 20.2335 139.34 25.0236 139.34 31.071ZM144.183 31.071C144.183 27.1791 147.011 24.7242 150.2 24.7242C153.268 24.7242 156.186 27.1791 156.186 31.071C156.186 34.963 153.509 37.4177 150.2 37.4177C147.011 37.4177 144.183 34.963 144.183 31.071Z"
+                                        fill="#FFC700" />
+                                    <path
+                                        d="M163.895 41.5492H168.557V28.8854L174.213 37.3279H175.446L180.921 28.9752V41.5492H185.584V20.5927H181.373L174.965 30.6218L168.226 20.5927H163.895V41.5492Z"
+                                        fill="#FFC700" />
+                                    <path
+                                        d="M189.484 41.5492H205.849V37.2082H194.147V33.0168H204.826V28.8255H194.147V24.9336H205.578V20.5927H189.484V41.5492Z"
+                                        fill="#FFC700" />
+                                    <path
+                                        d="M115.762 12.365L161.827 0.0812988L163.158 5.02577L117.093 17.3095L115.762 12.365Z"
+                                        fill="#333333" />
+                                    <path
+                                        d="M207.888 12.365L161.824 0.0812988L160.492 5.02577L206.557 17.3095L207.888 12.365Z"
+                                        fill="#333333" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="box-search">
+                            <button class="button btn-catalog">
+                                <span>Каталог</span>
+                                <svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.375 0H0.625C0.279813 0 0 0.288557 0 0.644531C0 1.00051 0.279813 1.28906 0.625 1.28906H15.375C15.7202 1.28906 16 1.00051 16 0.644531C16 0.288557 15.7202 0 15.375 0ZM15.375 4.78906H0.625C0.279813 4.78906 0 5.07762 0 5.43359C0 5.78957 0.279813 6.07812 0.625 6.07812H15.375C15.7202 6.07812 16 5.78957 16 5.43359C16 5.07762 15.7202 4.78906 15.375 4.78906ZM0.625 9.57812H15.375C15.7202 9.57812 16 9.86668 16 10.2227C16 10.5786 15.7202 10.8672 15.375 10.8672H0.625C0.279813 10.8672 0 10.5786 0 10.2227C0 9.86668 0.279813 9.57812 0.625 9.57812Z"
+                                        fill="#333333" />
+                                </svg>
+                            </button>
+                            <form class="form-search" action="#">
+                                <input class="input-search" type="text" name="input-search" id="input-search"
+                                    placeholder="Поиск по каталогу">
+                                <div class="input-icon">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.7364 2.26357C14.2767 0.803883 12.336 0 10.2717 0C8.20747 0 6.26674 0.803883 4.80709 2.26357C3.34744 3.72322 2.54352 5.66395 2.54352 7.72819C2.54352 9.61548 3.21585 11.3992 4.4466 12.8068L0.154617 17.0988C-0.0515391 17.305 -0.0515391 17.6392 0.154617 17.8454C0.257695 17.9484 0.392801 18 0.527871 18C0.662941 18 0.798082 17.9485 0.901125 17.8453L5.19314 13.5534C6.60069 14.7841 8.38445 15.4564 10.2717 15.4564C12.336 15.4564 14.2767 14.6526 15.7364 13.1929C17.196 11.7332 17.9999 9.79249 17.9999 7.72822C17.9999 5.66395 17.1961 3.72322 15.7364 2.26357ZM14.9899 12.4463C12.3883 15.0479 8.15527 15.0479 5.55367 12.4463C2.95211 9.84477 2.95211 5.61171 5.55367 3.01015C6.85459 1.70923 8.5629 1.05898 10.2718 1.05898C11.9802 1.05898 13.6892 1.70954 14.9899 3.01015C17.5914 5.61168 17.5914 9.84473 14.9899 12.4463Z" />
+                                    </svg>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="box-bth">
+                            <a class="button btn-favorites" href="#">
+                                <svg width="17" height="15" viewBox="0 0 17 15" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="heart"
+                                        d="M4.49988 1.09937C2.99988 1.09937 1.50001 1.59942 1 4.09937C0.292872 7.63483 7.49966 13.0991 7.99993 13.5993C8.49993 13.5993 15.4999 7.14882 15.4999 4.59931C15.4999 2.09931 13.9999 1.47431 12.4999 1.09931C10.4999 0.599315 9.49988 2.09931 7.99988 3.09931C6.99988 2.26598 5.99988 1.09937 4.49988 1.09937Z" />
+                                    <path class="heart-border"
+                                        d="M14.9352 1.38458C13.169 -0.461278 10.2957 -0.461278 8.52996 1.38458L8.11983 1.81307L7.70995 1.38458C5.9442 -0.461527 3.07068 -0.461527 1.30493 1.38458C-0.424968 3.19297 -0.436201 6.05944 1.27888 8.05246C2.84315 9.86959 7.4566 13.7954 7.65235 13.9616C7.78523 14.0745 7.94513 14.1295 8.10406 14.1295C8.10932 14.1295 8.11458 14.1295 8.1196 14.1292C8.28403 14.1372 8.44966 14.0782 8.58685 13.9616C8.78259 13.7954 13.3965 9.86959 14.9613 8.05221C16.6761 6.05944 16.6649 3.19297 14.9352 1.38458ZM13.8953 7.04958C12.6757 8.46596 9.32321 11.3872 8.1196 12.4238C6.91598 11.3874 3.56422 8.46646 2.34483 7.04983C1.14838 5.65969 1.13715 3.67991 2.31878 2.44468C2.92226 1.81407 3.71479 1.49851 4.50732 1.49851C5.29985 1.49851 6.09238 1.81382 6.69586 2.44468L7.59738 3.3871C7.70469 3.49928 7.83996 3.56623 7.98193 3.58972C8.21233 3.64144 8.46233 3.57423 8.64158 3.38735L9.54357 2.44468C10.7508 1.18321 12.7144 1.18346 13.9209 2.44468C15.1025 3.67991 15.0913 5.65969 13.8953 7.04958Z" />
+                                </svg>
+                                <span>Избранное</span>
+                            </a>
+                            <a class="button btn-basket" href="#">
+                                <div class="btn-basket__content">
+                                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M17.4388 6.88847C17.0457 6.39617 16.5093 6.12431 15.9289 6.12431H14.6026C14.4777 2.72232 12.0126 0 9 0C5.98744 0 3.52229 2.72232 3.39738 6.12431H2.07112C1.49065 6.12431 0.954268 6.39617 0.561166 6.88847C0.0651964 7.50568 -0.114822 8.36536 0.0725442 9.19197L1.66332 16.2017C1.90212 17.2597 2.72506 18.0019 3.6619 18.0019H14.3344C15.2713 18.0019 16.0942 17.2634 16.333 16.2017L17.9275 9.19197C18.1148 8.36536 17.9348 7.50568 17.4388 6.88847ZM9 1.49893C11.1896 1.49893 12.9825 3.54894 13.1 6.12431H4.89998C5.01755 3.55261 6.81039 1.49893 9 1.49893ZM16.4653 8.85765L14.8745 15.871C14.7937 16.2311 14.5622 16.5029 14.3381 16.5029H3.6619C3.43779 16.5029 3.20634 16.2311 3.12551 15.871L1.53474 8.85765C1.45024 8.48659 1.3988 7.62324 2.07112 7.62324H15.9289C16.6526 7.62324 16.5498 8.48659 16.4653 8.85765Z"
+                                            fill="#333333" />
+                                        <path
+                                            d="M5.27827 9.11536C4.86313 9.11536 4.52881 9.44968 4.52881 9.86482V14.549C4.52881 14.9641 4.86313 15.2984 5.27827 15.2984C5.69342 15.2984 6.02774 14.9641 6.02774 14.549V9.86482C6.03141 9.45335 5.69342 9.11536 5.27827 9.11536Z"
+                                            fill="#333333" />
+                                        <path
+                                            d="M8.91206 9.11536C8.49692 9.11536 8.1626 9.44968 8.1626 9.86482V14.549C8.1626 14.9641 8.49692 15.2984 8.91206 15.2984C9.32721 15.2984 9.66153 14.9641 9.66153 14.549V9.86482C9.66153 9.45335 9.32353 9.11536 8.91206 9.11536Z"
+                                            fill="#333333" />
+                                        <path
+                                            d="M12.5415 9.11536C12.1263 9.11536 11.792 9.44968 11.792 9.86482V14.549C11.792 14.9641 12.1263 15.2984 12.5415 15.2984C12.9566 15.2984 13.2909 14.9641 13.2909 14.549V9.86482C13.2909 9.45335 12.9566 9.11536 12.5415 9.11536Z"
+                                            fill="#333333" />
+                                    </svg>
+                                    <span>Корзина</span>
+                                </div>
+                                <div class="btn-basket__content--active">
+                                    <span>15 265 ₽</span>
+                                    <svg width="6" height="10" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5.34797 5.43946L1.53094 9.25637C1.28813 9.4993 0.894452 9.4993 0.65176 9.25637C0.409049 9.01366 0.409049 8.62001 0.65176 8.37732L4.02925 4.99994L0.651858 1.62267C0.409147 1.37986 0.409147 0.986248 0.651858 0.743537C0.89457 0.500728 1.28822 0.500728 1.53103 0.743537L5.34807 4.56051C5.46943 4.68192 5.53004 4.84088 5.53004 4.99992C5.53004 5.15903 5.46931 5.31811 5.34797 5.43946Z" />
+                                    </svg>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-content">
+                        <nav class="menu-navigation">
+                            <ul class="menu-navigation__list">
+                                <li class="menu-navigation__item">
+                                    <a class="menu-navigation__link" href="#">
+                                        <span>
+                                            Диваны
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu-navigation__item">
+                                    <a class="menu-navigation__link" href="#">
+                                        <span>
+                                            Кресла
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu-navigation__item">
+                                    <a class="menu-navigation__link" href="#">
+                                        <span>
+                                            Кровати
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu-navigation__item">
+                                    <a class="menu-navigation__link" href="#">
+                                        <span>
+                                            Матрасы
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu-navigation__item">
+                                    <a class="menu-navigation__link" href="#">
+                                        <span>
+                                            Шкафы
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu-navigation__item">
+                                    <a class="menu-navigation__link" href="#">
+                                        <span>
+                                            Cтеллажи
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu-navigation__item">
+                                    <a class="menu-navigation__link" href="#">
+                                        <span>
+                                            Столы
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu-navigation__item">
+                                    <a class="menu-navigation__link" href="#">
+                                        <span>
+                                            Стулья
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu-navigation__item">
+                                    <a class="menu-navigation__link" href="#">
+                                        <span>
+                                            Кухонная мебель
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu-navigation__item">
+                                    <a class="menu-navigation__link" href="#">
+                                        <span>
+                                            Комнаты
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu-navigation__item">
+                                    <a class="menu-navigation__link" href="#">
+                                        <span>
+                                            Блог
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu-navigation__item">
+                                    <a class="menu-navigation__link" href="#">
+                                        <span>
+                                            Доставка
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- Breadcrumb -->
+        <div class="box-breadcrumb">
+            <div class="wrapper">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="#">Каталог</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Диваны</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Section-soafs -->
+        <section class="section-soafs">
+            <div class="wrapper">
+                <div class="box-text-content">
+                    <div class="box-text-content__title">
+                        <span>
+                            Каталог диванов
+                        </span>
+                    </div>
+                    <div class="box-text-content__description">
+                        <p>
+                            В данном разделе вы найдете свой идеальный диван. Кожаный или текстильный, бюджетный или
+                            подороже, – в любом случае вы получите изделие высокого фабричного качества.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="container-category">
+
+                    <a href="#" class="card-category">
+                        <div class="title-category">
+                            <img class="icon-line" src="./pictures/line.png" alt="-">
+                            <span>
+                                Все диваны
+                            </span>
+                        </div>
+                        <div class="img-category">
+                            <img src="./pictures/Box-category/Box-category-1.jpg" alt="img">
+                        </div>
+                    </a>
+
+                    <a href="#" class="card-category">
+                        <div class="title-category">
+                            <img class="icon-line" src="./pictures/line.png" alt="-">
+                            <span>
+                                Диваны-кровати
+                            </span>
+                        </div>
+                        <div class="img-category">
+                            <img src="./pictures/Box-category/Box-category-2.jpg" alt="img">
+                        </div>
+                    </a>
+
+                    <a href="#" class="card-category">
+                        <div class="title-category">
+                            <img class="icon-line" src="./pictures/line.png" alt="-">
+                            <span>
+                                Угловые кожанные диваны
+                            </span>
+                        </div>
+                        <div class="img-category">
+                            <img src="./pictures/Box-category/Box-category-3.jpg" alt="img">
+                        </div>
+                    </a>
+
+                    <a href="#" class="card-category">
+                        <div class="title-category">
+                            <img class="icon-line" src="./pictures/line.png" alt="-">
+                            <span>
+                                Угловые тканиевые диваны
+                            </span>
+                        </div>
+                        <div class="img-category">
+                            <img src="./pictures/Box-category/Box-category-4.jpg" alt="img">
+                        </div>
+                    </a>
+
+                    <a href="#" class="card-category">
+                        <div class="title-category">
+                            <img class="icon-line" src="./pictures/line.png" alt="-">
+                            <span>
+                                Прямые кожаные диваны
+                            </span>
+                        </div>
+                        <div class="img-category">
+                            <img src="./pictures/Box-category/Box-category-5.jpg" alt="img">
+                        </div>
+                    </a>
+
+                    <a href="#" class="card-category">
+                        <div class="title-category">
+                            <img class="icon-line" src="./pictures/line.png" alt="-">
+                            <span>
+                                Прямые тканевые диваны
+                            </span>
+                        </div>
+                        <div class="img-category">
+                            <img src="./pictures/Box-category/Box-category-6.jpg" alt="img">
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section-filter -->
+        <section class="section-filter">
+            <div class="wrapper">
+                <div class="content-filter">
+                    <ul class="filter-list">
+                        <li class="filter-item">
+                            <a class="filter-link" href="#">
+                                Размер
+                            </a>
+                        </li>
+                        <li class="filter-item">
+                            <a class="filter-link" href="#">
+                                Спальное место
+                            </a>
+                        </li>
+                        <li class="filter-item">
+                            <a class="filter-link" href="#">
+                                Механизмы
+                            </a>
+                        </li>
+                        <li class="filter-item">
+                            <a class="filter-link" href="#">
+                                Цвет
+                            </a>
+                        </li>
+                        <li class="filter-item">
+                            <a class="filter-link" href="#">
+                                Обивка
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="filter-box">
+                        <button class="button filter-btn">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.25 14.25H15.2527C14.928 13.1693 13.935 12.375 12.75 12.375C11.565 12.375 10.5728 13.1693 10.2473 14.25H0.749988C0.335988 14.25 0 14.586 0 15C0 15.414 0.335988 15.75 0.749988 15.75H10.2472C10.572 16.8307 11.565 17.625 12.75 17.625C13.935 17.625 14.9272 16.8307 15.2527 15.75H17.25C17.6647 15.75 18 15.414 18 15C18 14.586 17.6647 14.25 17.25 14.25ZM12.75 16.125C12.1297 16.125 11.625 15.6203 11.625 15C11.625 14.3797 12.1297 13.875 12.75 13.875C13.3703 13.875 13.875 14.3797 13.875 15C13.875 15.6203 13.3702 16.125 12.75 16.125Z"
+                                    fill="#838383" />
+                                <path
+                                    d="M17.25 2.25011H15.2527C14.9272 1.16937 13.935 0.375122 12.75 0.375122C11.565 0.375122 10.5728 1.16937 10.2472 2.25011H0.749988C0.335988 2.25011 0 2.5861 0 3.0001C0 3.4141 0.335988 3.75009 0.749988 3.75009H10.2472C10.5728 4.83086 11.565 5.62511 12.75 5.62511C13.935 5.62511 14.9273 4.83086 15.2527 3.75012H17.25C17.6647 3.75012 18 3.41413 18 3.00013C18 2.58613 17.6647 2.25011 17.25 2.25011ZM12.75 4.1251C12.1297 4.1251 11.625 3.62036 11.625 3.0001C11.625 2.37984 12.1297 1.8751 12.75 1.8751C13.3703 1.8751 13.875 2.37984 13.875 3.0001C13.875 3.62036 13.3702 4.1251 12.75 4.1251Z"
+                                    fill="#838383" />
+                                <path
+                                    d="M17.25 8.24987H7.75276C7.42725 7.16913 6.435 6.37488 5.25002 6.37488C4.06505 6.37488 3.07276 7.16913 2.74729 8.24987H0.749988C0.335988 8.24987 0 8.58586 0 8.99986C0 9.41386 0.335988 9.74985 0.749988 9.74985H2.74725C3.07276 10.8306 4.06501 11.6248 5.24999 11.6248C6.43496 11.6248 7.42725 10.8306 7.75273 9.74985H17.25C17.6647 9.74985 18 9.41386 18 8.99986C18 8.58586 17.6647 8.24987 17.25 8.24987ZM5.24999 10.1249C4.62973 10.1249 4.12499 9.62012 4.12499 8.99986C4.12499 8.37959 4.62973 7.87486 5.24999 7.87486C5.87025 7.87486 6.37499 8.37959 6.37499 8.99986C6.37499 9.62012 5.87025 10.1249 5.24999 10.1249Z"
+                                    fill="#838383" />
+                            </svg>
+                            Все фильтры
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section-catalog -->
+        <section class="section-catalog">
+            <div class="wrapper">
+                <div class="container-chips">
+                    <div class="chips-box">
+                        <div class="chips-item">
+                            <span>Ширина: 80-440</span>
+                            <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.0625 0.999023L7.95405 7.99955" stroke="#333333" stroke-width="1.5" />
+                                <path d="M1 7.99969L8.00103 0.999545" stroke="#333333" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <div class="chips-item">
+                            <span>Высота: 52-156</span>
+                            <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.0625 0.999023L7.95405 7.99955" stroke="#333333" stroke-width="1.5" />
+                                <path d="M1 7.99969L8.00103 0.999545" stroke="#333333" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <div class="chips-item">
+                            <span>Механизм: Выкатной</span>
+                            <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.0625 0.999023L7.95405 7.99955" stroke="#333333" stroke-width="1.5" />
+                                <path d="M1 7.99969L8.00103 0.999545" stroke="#333333" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <div class="chips-item">
+                            <span>Тип: Еврокнижка</span>
+                            <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.0625 0.999023L7.95405 7.99955" stroke="#333333" stroke-width="1.5" />
+                                <path d="M1 7.99969L8.00103 0.999545" stroke="#333333" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <div class="remove-filter remove-filter--color">
+                            <span>
+                                сбросить фильтры
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="conteiner-dropdown">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Сначала дешевле
+                                <svg width="10" height="7" viewBox="0 0 10 7" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 1L5 5L1 1" stroke="#333333" stroke-width="1.5" />
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Сначала дешевле</a></li>
+                                <li><a class="dropdown-item" href="#">Сначала дороже</a></li>
+                                <li><a class="dropdown-item" href="#">От А до Я</a></li>
+                                <li><a class="dropdown-item" href="#">От Я до А</a></li>
+                                <li><a class="dropdown-item" href="#">Сначала по акции</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-container-card">
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="./pictures/Catalog/catalog-1.jpg" alt="img">
+                        </div>
+                        <div class="catalog-card__text-content">
+                            <div class="catalog-card__title">
+                                <span>
+                                    KLINGSBO КЛИНГСБУ
+                                </span>
+                            </div>
+                            <div class="catalog-card__description">
+                                <p>
+                                    Угловой диван 2560 x 1620 x h980 см, спальное место 2130 x 1580 см, ящик для
+                                    хранения
+                                </p>
+                            </div>
+                            <div class="catalog-card__buy">
+                                <div class="catalog-card__buy-box"> <span>1 499 </span><sup>&#8381;</sup> </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="./pictures/Catalog/catalog-2.jpg" alt="img">
+                        </div>
+                        <div class="catalog-card__text-content">
+                            <div class="catalog-card__title">
+                                <span>
+                                    KLINGSBO КЛИНГСБУ
+                                </span>
+                            </div>
+                            <div class="catalog-card__description">
+                                <p>
+                                    Угловой диван 2560 x 1620 x h980 см, спальное место 2130 x 1580 см, ящик для
+                                    хранения
+                                </p>
+                            </div>
+                            <div class="catalog-card__buy">
+                                <div class="catalog-card__buy-box"> <span>1 499 </span><sup>&#8381;</sup> </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="./pictures/Catalog/catalog-3.jpg" alt="img">
+                        </div>
+                        <div class="catalog-card__text-content">
+                            <div class="catalog-card__title">
+                                <span>
+                                    KLINGSBO КЛИНГСБУ
+                                </span>
+                            </div>
+                            <div class="catalog-card__description">
+                                <p>
+                                    Угловой диван 2560 x 1620 x h980 см, спальное место 2130 x 1580 см, ящик для
+                                    хранения
+                                </p>
+                            </div>
+                            <div class="catalog-card__buy">
+                                <div class="catalog-card__buy-box"> <span>1 499 </span><sup>&#8381;</sup> </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="./pictures/Catalog/catalog-4.jpg" alt="img">
+                        </div>
+                        <div class="catalog-card__text-content">
+                            <div class="catalog-card__title">
+                                <span>
+                                    KLINGSBO КЛИНГСБУ
+                                </span>
+                            </div>
+                            <div class="catalog-card__description">
+                                <p>
+                                    Угловой диван 2560 x 1620 x h980 см, спальное место 2130 x 1580 см, ящик для
+                                    хранения
+                                </p>
+                            </div>
+                            <div class="catalog-card__buy">
+                                <div class="catalog-card__buy-box"> <span>1 499 </span><sup>&#8381;</sup> </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="./pictures/Catalog/catalog-5.jpg" alt="img">
+                        </div>
+                        <div class="catalog-card__text-content">
+                            <div class="catalog-card__title">
+                                <span>
+                                    KLINGSBO КЛИНГСБУ
+                                </span>
+                            </div>
+                            <div class="catalog-card__description">
+                                <p>
+                                    Угловой диван 2560 x 1620 x h980 см, спальное место 2130 x 1580 см, ящик для
+                                    хранения
+                                </p>
+                            </div>
+                            <div class="catalog-card__buy">
+                                <div class="catalog-card__buy-box"> <span>1 499 </span><sup>&#8381;</sup> </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="./pictures/Catalog/catalog-6.jpg" alt="img">
+                        </div>
+                        <div class="catalog-card__text-content">
+                            <div class="catalog-card__title">
+                                <span>
+                                    KLINGSBO КЛИНГСБУ
+                                </span>
+                            </div>
+                            <div class="catalog-card__description">
+                                <p>
+                                    Угловой диван 2560 x 1620 x h980 см, спальное место 2130 x 1580 см, ящик для
+                                    хранения
+                                </p>
+                            </div>
+                            <div class="catalog-card__buy">
+                                <div class="catalog-card__buy-box"> <span>1 499 </span><sup>&#8381;</sup> </div>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="./pictures/Catalog/catalog-1.jpg" alt="img">
+                        </div>
+                        <div class="catalog-card__text-content">
+                            <div class="catalog-card__title">
+                                <span>
+                                    KLINGSBO КЛИНГСБУ
+                                </span>
+                            </div>
+                            <div class="catalog-card__description">
+                                <p>
+                                    Угловой диван 2560 x 1620 x h980 см, спальное место 2130 x 1580 см, ящик для
+                                    хранения
+                                </p>
+                            </div>
+                            <div class="catalog-card__buy">
+                                <div class="catalog-card__buy-box"> <span>1 499 </span><sup>&#8381;</sup> </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="./pictures/Catalog/catalog-2.jpg" alt="img">
+                        </div>
+                        <div class="catalog-card__text-content">
+                            <div class="catalog-card__title">
+                                <span>
+                                    KLINGSBO КЛИНГСБУ
+                                </span>
+                            </div>
+                            <div class="catalog-card__description">
+                                <p>
+                                    Угловой диван 2560 x 1620 x h980 см, спальное место 2130 x 1580 см, ящик для
+                                    хранения
+                                </p>
+                            </div>
+                            <div class="catalog-card__buy">
+                                <div class="catalog-card__buy-box"> <span>1 499 </span><sup>&#8381;</sup> </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="./pictures/Catalog/catalog-3.jpg" alt="img">
+                        </div>
+                        <div class="catalog-card__text-content">
+                            <div class="catalog-card__title">
+                                <span>
+                                    KLINGSBO КЛИНГСБУ
+                                </span>
+                            </div>
+                            <div class="catalog-card__description">
+                                <p>
+                                    Угловой диван 2560 x 1620 x h980 см, спальное место 2130 x 1580 см, ящик для
+                                    хранения
+                                </p>
+                            </div>
+                            <div class="catalog-card__buy">
+                                <div class="catalog-card__buy-box"> <span>1 499 </span><sup>&#8381;</sup> </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="./pictures/Catalog/catalog-4.jpg" alt="img">
+                        </div>
+                        <div class="catalog-card__text-content">
+                            <div class="catalog-card__title">
+                                <span>
+                                    KLINGSBO КЛИНГСБУ
+                                </span>
+                            </div>
+                            <div class="catalog-card__description">
+                                <p>
+                                    Угловой диван 2560 x 1620 x h980 см, спальное место 2130 x 1580 см, ящик для
+                                    хранения
+                                </p>
+                            </div>
+                            <div class="catalog-card__buy">
+                                <div class="catalog-card__buy-box"> <span>1 499 </span><sup>&#8381;</sup> </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="./pictures/Catalog/catalog-5.jpg" alt="img">
+                        </div>
+                        <div class="catalog-card__text-content">
+                            <div class="catalog-card__title">
+                                <span>
+                                    KLINGSBO КЛИНГСБУ
+                                </span>
+                            </div>
+                            <div class="catalog-card__description">
+                                <p>
+                                    Угловой диван 2560 x 1620 x h980 см, спальное место 2130 x 1580 см, ящик для
+                                    хранения
+                                </p>
+                            </div>
+                            <div class="catalog-card__buy">
+                                <div class="catalog-card__buy-box"> <span>1 499 </span><sup>&#8381;</sup> </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="./pictures/Catalog/catalog-6.jpg" alt="img">
+                        </div>
+                        <div class="catalog-card__text-content">
+                            <div class="catalog-card__title">
+                                <span>
+                                    KLINGSBO КЛИНГСБУ
+                                </span>
+                            </div>
+                            <div class="catalog-card__description">
+                                <p>
+                                    Угловой диван 2560 x 1620 x h980 см, спальное место 2130 x 1580 см, ящик для
+                                    хранения
+                                </p>
+                            </div>
+                            <div class="catalog-card__buy">
+                                <div class="catalog-card__buy-box"> <span>1 499 </span><sup>&#8381;</sup> </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="paginator-container">
+                    <div class="paginator">
+                        <a class="current current--active" href="#1">1</a>
+                        <a class="current" href="#2">2</a>
+                        <a class="current" href="#3">3</a>
+                        <span>&hellip;</span>
+                        <a class="current" href="#3">8</a>
+                    </div>
+                </div>
+
+                <div class="section-catalog__description">
+                    <p>
+                        Многие модели в различных цветах и из разных материалов есть в наличии в нашем магазине.
+                        Чтобы вам было проще выбрать, мы прописали максимальные характеристики изделий: вид ткани,
+                        конфигурацию, состав наполнителя, размер, бренд.
+
+                    </p>
+                    <p>
+                        Выбирайте диван подходящего вам цвета, материала, формы и стиля и заказывайте онлайн или в
+                        магазине. Многие модели можно изготовить в индивидуальной расцветке или обивке. Напишите
+                        нам,
+                        расскажем подробности.
+
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related-products -->
+        <section class="related-products">
+            <div class="wrapper">
+                <div class="related-products-title">
+                        <span>
+                            Сопутствующие товары
+                        </span>
+                    </div>
+                <div class="related-products__container">
+                    <a class="related-products__card" href="#">
+                        <div class="mask-blur-card"></div>
+                        <div class="related-products__img">
+                            <img src="./pictures/Related-products/product-1.jpg" alt="img">
+                        </div>
+                        <div class="related-products__text-content">
+                            <div class="related-products__title">
+                                <span>
+                                    Пуфы для ног
+                                </span>
+                            </div>
+                            <div class="related-products__options">
+                                <span>
+                                    15 вариантов
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="related-products__card" href="#">
+                        <div class="mask-blur-card"></div>
+                        <div class="related-products__img">
+                            <img src="./pictures/Related-products/product-2.jpg" alt="img">
+                        </div>
+                        <div class="related-products__text-content">
+                            <div class="related-products__title">
+                                <span>
+                                    Столы для ноутбуков
+                                </span>
+                            </div>
+                            <div class="related-products__options">
+                                <span>
+                                    5 вариантов
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="related-products__card" href="#">
+                        <div class="mask-blur-card"></div>
+                        <div class="related-products__img">
+                            <img src="./pictures/Related-products/product-3.jpg" alt="img">
+                        </div>
+                        <div class="related-products__text-content">
+                            <div class="related-products__title">
+                                <span>
+                                    Матрасы для диванов (топперы)
+                                </span>
+                            </div>
+                            <div class="related-products__options">
+                                <span>
+                                    125 вариантов
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="related-products__card" href="#">
+                        <div class="mask-blur-card"></div>
+                        <div class="related-products__img">
+                            <img src="./pictures/Related-products/product-4.jpg" alt="img">
+                        </div>
+                        <div class="related-products__text-content">
+                            <div class="related-products__title">
+                                <span>
+                                    Кресла
+                                </span>
+                            </div>
+                            <div class="related-products__options">
+                                <span>
+                                    15 вариантов
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="wrapper">
+                <div class="footer-content">
+                    <div class="footer-content__box--right">
+                        <div class="footer-content__container-logo">
+                            <a class="footer-content__logo" href="#">
+                                <svg width="169" height="34" viewBox="0 0 169 34" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0)">
+                                        <path
+                                            d="M0.179688 33.6349H3.95948V27.9396L5.17879 26.7036L10.9582 33.6349H15.933L8.03194 24.1831L15.4452 16.6702H10.5193L3.95948 23.2864V16.6702H0.179688V33.6349Z"
+                                            fill="white" />
+                                        <path
+                                            d="M17.2773 33.6349H30.5432V30.1208H21.0572V26.7278H29.714V23.3349H21.0572V20.1843H30.3238V16.6702H17.2773V33.6349Z"
+                                            fill="white" />
+                                        <path d="M33.1133 33.6349H46.1108V30.1208H36.8931V16.6702H33.1133V33.6349Z"
+                                            fill="white" />
+                                        <path d="M47.9492 33.6349H60.9468V30.1208H51.729V16.6702H47.9492V33.6349Z"
+                                            fill="white" />
+                                        <path
+                                            d="M62.7852 33.6349H76.0512V30.1208H66.5649V26.7278H75.222V23.3349H66.5649V20.1843H75.8316V16.6702H62.7852V33.6349Z"
+                                            fill="white" />
+                                        <path
+                                            d="M82.4048 33.6349V27.8428H85.1118L89.2818 33.6349H93.8419L89.0866 27.1641C91.1349 26.3643 92.4276 24.377 92.4276 22.1958C92.4276 19.3845 90.9644 16.6702 85.5262 16.6702H78.625V33.6349H82.4048ZM85.4531 20.1843C87.8672 20.1843 88.5014 20.9841 88.5014 22.1958C88.5014 23.553 87.4528 24.3285 85.5995 24.3285H82.4048V20.1843H85.4531Z"
+                                            fill="white" />
+                                        <path
+                                            d="M106.86 33.6353H110.64V16.6704H106.86V23.3351H99.2759V16.6704H95.4961V33.6353H99.2759V26.8492H106.86V33.6353Z"
+                                            fill="#FFC700" />
+                                        <path
+                                            d="M112.953 25.1526C112.953 30.1935 116.879 33.9257 121.757 33.9257C126.634 33.9257 130.535 30.1449 130.535 25.1526C130.535 20.1116 126.634 16.3794 121.757 16.3794C116.806 16.3794 112.953 20.257 112.953 25.1526ZM116.879 25.1526C116.879 22.002 119.172 20.0147 121.757 20.0147C124.244 20.0147 126.609 22.002 126.609 25.1526C126.609 28.3033 124.439 30.2904 121.757 30.2904C119.172 30.2904 116.879 28.3033 116.879 25.1526Z"
+                                            fill="#FFC700" />
+                                        <path
+                                            d="M132.859 33.6353H136.639V23.3836L141.224 30.218H142.224L146.662 23.4563V33.6353H150.442V16.6704H147.028L141.834 24.7892L136.371 16.6704H132.859V33.6353Z"
+                                            fill="#FFC700" />
+                                        <path
+                                            d="M153.602 33.6353H166.868V30.1211H157.381V26.7281H166.038V23.3351H157.381V20.1845H166.648V16.6704H153.602V33.6353Z"
+                                            fill="#FFC700" />
+                                        <path
+                                            d="M93.8398 10.0099L131.182 0.065918L132.261 4.06858L94.9191 14.0125L93.8398 10.0099Z"
+                                            fill="white" />
+                                        <path
+                                            d="M168.523 10.0099L131.181 0.065918L130.102 4.06858L167.443 14.0125L168.523 10.0099Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0">
+                                            <rect width="168.612" height="34" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <div class="footer-content__logo-description">
+                                <span>
+                                    Магазин домашней и офисной
+                                    <br> мебели в Петрозаводске
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="contacts">
+                            <div class="contacts-container">
+                                <div class="contacts__title">
+                                    <span>
+                                        По всем вопросам
+                                    </span>
+                                </div>
+                                <a href="tel:+1234567890" class="contacts__tel">
+                                    +7 967 343-45-45
+                                </a>
+                            </div>
+                            <div class="contacts-container">
+                                <div class="contacts__title">
+                                    <span>
+                                        По всем вопросам
+                                    </span>
+                                </div>
+                                <div class="contacts__social-box">
+                                    <a class="contacts__social" href="#">
+                                        <svg width="16" height="10" viewBox="0 0 16 10"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15.9151 8.67611C15.8958 8.63435 15.8777 8.59972 15.8609 8.57197C15.5833 8.072 15.0528 7.45833 14.2698 6.73078L14.2533 6.71412L14.245 6.70595L14.2366 6.69758H14.2282C13.8728 6.35879 13.6478 6.131 13.5535 6.01438C13.3811 5.79221 13.3424 5.56734 13.4367 5.33949C13.5033 5.16734 13.7534 4.80378 14.1864 4.24832C14.4142 3.95394 14.5946 3.71801 14.7279 3.54026C15.6887 2.26285 16.1053 1.44657 15.9775 1.09109L15.9279 1.00802C15.8945 0.958011 15.8084 0.91226 15.6698 0.870535C15.5308 0.828898 15.3531 0.822012 15.1364 0.849761L12.7373 0.866334C12.6985 0.852562 12.643 0.853845 12.5707 0.870535C12.4984 0.887225 12.4623 0.895599 12.4623 0.895599L12.4206 0.916461L12.3874 0.941525C12.3596 0.958098 12.3291 0.987247 12.2957 1.02891C12.2626 1.07043 12.2348 1.11916 12.2126 1.17469C11.9514 1.84668 11.6545 2.47147 11.3212 3.04902C11.1157 3.39341 10.9269 3.69187 10.7546 3.94458C10.5825 4.1972 10.4381 4.38333 10.3215 4.50264C10.2048 4.62206 10.0995 4.71774 10.0049 4.79001C9.91044 4.86231 9.83834 4.89286 9.78842 4.88169C9.73838 4.87051 9.69125 4.85942 9.64664 4.84834C9.56894 4.79833 9.50644 4.73031 9.45932 4.64424C9.41199 4.55816 9.38013 4.44982 9.36347 4.31931C9.3469 4.18871 9.33709 4.07638 9.33429 3.98193C9.33169 3.88759 9.33289 3.75416 9.33852 3.58201C9.3443 3.40978 9.3469 3.29324 9.3469 3.23214C9.3469 3.02107 9.35101 2.79199 9.35927 2.54485C9.36767 2.29772 9.37447 2.1019 9.38016 1.95765C9.38582 1.81325 9.38844 1.66047 9.38844 1.49941C9.38844 1.33835 9.37864 1.21203 9.35927 1.12036C9.34013 1.0288 9.31074 0.93992 9.27202 0.853758C9.23307 0.767683 9.17606 0.701099 9.10125 0.653831C9.02629 0.606621 8.93309 0.569156 8.82219 0.54132C8.52781 0.474707 8.15296 0.438672 7.69747 0.43307C6.66454 0.421982 6.00083 0.488683 5.70648 0.633085C5.58985 0.694096 5.48432 0.777457 5.38996 0.882906C5.28996 1.00513 5.27602 1.07183 5.3482 1.0828C5.68147 1.13273 5.91741 1.25215 6.05626 1.44096L6.1063 1.54102C6.14523 1.6132 6.18409 1.741 6.22299 1.92424C6.26182 2.10748 6.28689 2.31018 6.29792 2.53222C6.32563 2.93771 6.32563 3.28481 6.29792 3.57355C6.27011 3.86241 6.24385 4.08729 6.21878 4.24835C6.19372 4.40941 6.15626 4.53993 6.1063 4.63986C6.05626 4.73982 6.02297 4.80092 6.00628 4.8231C5.98962 4.84527 5.97573 4.85925 5.9647 4.86473C5.89252 4.8924 5.81744 4.90649 5.73974 4.90649C5.66192 4.90649 5.56756 4.86757 5.45651 4.78978C5.34549 4.71199 5.23027 4.60514 5.11084 4.46905C4.99141 4.33294 4.85673 4.14273 4.70673 3.89839C4.55684 3.65405 4.40132 3.36528 4.24026 3.03207L4.107 2.79042C4.0237 2.63496 3.9099 2.40859 3.7655 2.11153C3.62101 1.81435 3.4933 1.52689 3.38228 1.24921C3.3379 1.13258 3.27123 1.04379 3.18238 0.982695L3.14069 0.957631C3.11297 0.935456 3.06847 0.911909 3.00743 0.886816C2.9463 0.861752 2.88252 0.843779 2.81582 0.83272L0.533256 0.849294C0.300008 0.849294 0.141747 0.902135 0.0584143 1.00767L0.0250639 1.05759C0.00840325 1.0854 0 1.12981 0 1.19094C0 1.25204 0.0166606 1.32702 0.050011 1.41581C0.383223 2.19895 0.745584 2.95422 1.13709 3.68174C1.5286 4.40927 1.86882 4.99531 2.15753 5.43934C2.44631 5.88369 2.74066 6.30306 3.04058 6.69726C3.3405 7.0916 3.53902 7.34431 3.63616 7.45533C3.73341 7.56656 3.80979 7.64971 3.86532 7.70524L4.07362 7.90514C4.20691 8.03845 4.40263 8.19811 4.66089 8.38412C4.9192 8.57025 5.20517 8.75348 5.51895 8.93413C5.83279 9.11447 6.19789 9.26165 6.61447 9.37547C7.03098 9.48941 7.43638 9.53513 7.83072 9.51307H8.78875C8.98305 9.4963 9.13025 9.4352 9.2303 9.32975L9.26345 9.288C9.28574 9.25485 9.3066 9.20335 9.32586 9.13405C9.34535 9.06464 9.35504 8.98816 9.35504 8.90498C9.34935 8.66621 9.36752 8.45103 9.40907 8.25944C9.45059 8.06792 9.49792 7.92352 9.55085 7.82627C9.60375 7.72911 9.66345 7.64712 9.72989 7.58065C9.79647 7.51403 9.84391 7.47368 9.87175 7.45979C9.89941 7.44582 9.9215 7.43633 9.93816 7.43064C10.0714 7.38624 10.2283 7.42924 10.409 7.55987C10.5895 7.69039 10.7588 7.85154 10.9172 8.04306C11.0755 8.23476 11.2657 8.44983 11.4878 8.68859C11.71 8.92744 11.9043 9.10499 12.0709 9.22179L12.2374 9.32175C12.3487 9.38846 12.4931 9.44955 12.6708 9.50508C12.8482 9.56058 13.0037 9.57446 13.1372 9.54672L15.2697 9.51345C15.4807 9.51345 15.6448 9.47853 15.7612 9.40923C15.8779 9.33982 15.9472 9.26334 15.9695 9.18015C15.9918 9.09688 15.993 9.0024 15.9737 8.89678C15.954 8.79142 15.9345 8.71774 15.9151 8.67611Z" />
+                                        </svg>
+                                    </a>
+                                    <a class="contacts__social" href="#">
+                                        <svg width="15" height="15" viewBox="0 0 15 15"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M10.3094 0H4.48906C2.12363 0 0.199219 1.92441 0.199219 4.28984V10.1102C0.199219 12.4756 2.12363 14.4 4.48906 14.4H10.3094C12.6748 14.4 14.5992 12.4756 14.5992 10.1102V4.28984C14.5992 1.92441 12.6748 0 10.3094 0ZM13.1506 10.1102C13.1506 11.6793 11.8785 12.9514 10.3094 12.9514H4.48906C2.91992 12.9514 1.64786 11.6793 1.64786 10.1102V4.28984C1.64786 2.72067 2.91992 1.44864 4.48906 1.44864H10.3094C11.8785 1.44864 13.1506 2.72067 13.1506 4.28984V10.1102ZM7.39916 3.47583C5.34555 3.47583 3.6748 5.14657 3.6748 7.20016C3.6748 9.25374 5.34555 10.9245 7.39916 10.9245C9.45277 10.9245 11.1235 9.25377 11.1235 7.20016C11.1235 5.14654 9.45277 3.47583 7.39916 3.47583ZM7.39916 9.47589C6.14231 9.47589 5.12344 8.45703 5.12344 7.20018C5.12344 5.94333 6.14233 4.92447 7.39916 4.92447C8.65601 4.92447 9.67487 5.94333 9.67487 7.20018C9.67487 8.45701 8.65598 9.47589 7.39916 9.47589ZM12.0233 3.50376C12.0233 3.99664 11.6238 4.39619 11.1309 4.39619C10.638 4.39619 10.2385 3.99664 10.2385 3.50376C10.2385 3.01088 10.638 2.61133 11.1309 2.61133C11.6238 2.61133 12.0233 3.01088 12.0233 3.50376Z" />
+                                        </svg>
+                                    </a>
+
+                                    <a class="contacts__social" href="#">
+                                        Напишите нам
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-content__box--left">
+                        <nav class="footer-content__menu-nav">
+                            <div class="footer-content__list-title">
+                                <span>
+                                    Информация
+                                </span>
+                            </div>
+                            <ul class="footer-content__list">
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        О компании
+                                    </a>
+                                </li>
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Адреса магазинов
+                                    </a>
+                                </li>
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Оптовикам
+                                    </a>
+                                </li>
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Покупателям
+                                    </a>
+                                </li>
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Доставка
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <nav class="footer-content__menu-nav">
+                            <div class="footer-content__list-title">
+                                <span>
+                                    Комнаты
+                                </span>
+                            </div>
+                            <ul class="footer-content__list">
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Прихожая
+                                    </a>
+                                </li>
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Кухня
+                                    </a>
+                                </li>
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Спальня
+                                    </a>
+                                </li>
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Гостиная
+                                    </a>
+                                </li>
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Ванная
+                                    </a>
+                                </li>
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Детская
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <nav class="footer-content__menu-nav">
+                            <div class="footer-content__list-title">
+                                <span>
+                                    Каталог
+                                </span>
+                            </div>
+                            <ul class="footer-content__list">
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Вся мебель
+                                    </a>
+                                </li>
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Диваны и кресла
+                                    </a>
+                                </li>
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Столы и стулья
+                                    </a>
+                                </li>
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Кухонная мебель
+                                    </a>
+                                </li>
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Мебель для ванной
+                                    </a>
+                                </li>
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Тумбы и комоды
+                                    </a>
+                                </li>
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Кровати и матрасы
+                                    </a>
+                                </li>
+                                <li class="footer-content__item">
+                                    <a class="footer-content__link" href="#">
+                                        Шкафа и стеллажи
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+        <!-- Section-coopyright -->
+        <section class="section-coopyright">
+            <div class="wrapper">
+                <div class="section-coopyright-content">
+                    <div class="section-coopyright-content__text">
+                        <span>© Keller Home, 2020–2021</span>
+                        <span class="text-dots">Пользовательское соглашение</span>
+                        <span>Публичная оферта</span>
+                    </div>
+
+                    <div class="section-coopyright-content__logo">
+                        <a href="#">
+                            <img class="section-coopyright-content__img" src="./pictures/logo mkomov.png" alt="logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
