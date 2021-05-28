@@ -1,3 +1,7 @@
+.section-filter {
+    padding-bottom: 34px;
+}
+
 .content-filter {
     width: 100%;
     padding: 26px 23px 26px 30px;
@@ -6,7 +10,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 34px;
 }
 
 .filter-btn {
